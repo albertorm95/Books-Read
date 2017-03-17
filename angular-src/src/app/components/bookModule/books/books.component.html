@@ -1,0 +1,34 @@
+<div class="container">
+	<h2 class="page-header">Books</h2>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<div class="input-group ">
+	            <div class="input-group-btn">
+	                <button class="btn btn-primary" [routerLink]="['/createbook']"><i class="fa fa-plus" aria-hidden="true"></i></button>
+	            </div>
+	        </div>
+        </div>
+		<table class="table table-hover table-responsive">
+			<thead>
+				<tr>
+					<th>Book's Name</th>
+					<th>Author</th>
+					<th>Genre</th>
+					<th>Date</th>
+					<th>ISBN</th>
+					<th>Cover</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let item of book">
+					<th><a [routerLink]="['/book', item._id]">{{item.name}}</a></th>
+					<th>{{item.author}}</th>
+					<th>{{item.genre}}</th>
+					<th>{{item.publishdate | date}}</th>
+					<th>{{item.isbn}}</th>
+					<th><img src="{{item.cover}}" style="width: 50px;"></th>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

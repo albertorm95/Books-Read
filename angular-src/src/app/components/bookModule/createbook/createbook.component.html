@@ -1,0 +1,31 @@
+<div class="container">
+	<h2 class="page-header">Create Book</h2>
+	<form (submit)="onRegisterSubmit()">
+		<div class="from-group">
+			<label>Name</label>
+			<input class="form-control" type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" name="name">
+		</div>
+		<div class="from-group">
+			<label>Genre</label>
+			<input class="form-control" type="text" [(ngModel)]="genre" [ngModelOptions]="{standalone: true}" genre="genre">
+		</div>
+		<div class="from-group">
+			<label>Author</label>
+			<input class="form-control" type="text" [(ngModel)]="author" [ngModelOptions]="{standalone: true}" author="author">
+		</div>
+		<div class="from-group">
+			<label>Isbn</label>
+			<input class="form-control" type="text" [(ngModel)]="isbn" [ngModelOptions]="{standalone: true}" isbn="isbn">
+		</div>
+		<div class="from-group">
+			<label>Date</label>
+			<input class="form-control" type="date" [(ngModel)]="publishdate" [ngModelOptions]="{standalone: true}" publishdate="publishdate">
+		</div>
+		<div class="from-group">
+			<label>Cover (URL)</label>
+			<input class="form-control" type="text" [(ngModel)]="cover" [ngModelOptions]="{standalone: true}" cover="cover">
+		</div>
+		<br>
+		<input class="btn btn-primary" type="submit" value="Submit">
+	</form>
+</div>

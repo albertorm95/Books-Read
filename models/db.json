@@ -1,0 +1,56 @@
+  {
+    "name": "The Maze Runner",
+    "genre": "Young adult, science fiction, post-apocalyptic",
+    "author": "James Dashner",
+    "publishdate": "2009-10-07T05:00:00.000Z",
+    "isbn": "9780385737944",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/d/db/The_Maze_Runner_cover.png"
+  },
+  {
+    "name": "The Scorch Trials",
+    "genre": "Young adult, science fiction, post-apocalyptic",
+    "author": "James Dashner",
+    "publishdate": "2010-09-18T05:00:00.000Z",
+    "isbn": "9780385738750",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/b/b6/The_Scorch_Trials_cover.jpg"
+  },
+  {
+    "name": "The Death Cure",
+    "genre": "Young adult, dystopia, science fiction",
+    "author": "James Dashner",
+    "publishdate": "2011-10-11T05:00:00.000Z",
+    "isbn": "9780385738774",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/5/55/The_Death_Cure.jpg"
+  },
+    {
+    "name": "The Eye of Minds",
+    "genre": "Young adult, science fiction",
+    "author": "James Dashner",
+    "publishdate": "2013-10-08T05:00:00.000Z",
+    "isbn": "9780385741392",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/a/a2/TheEyeofMindsDashner.jpg"
+  },
+  {
+    "name":"Ready Player One",
+    "genre":"Hard science fiction and dystopian",
+    "author":"Ernest Cline",
+    "publishdate":"06/16/2011",
+    "isbn":"9780307887436",
+    "cover":"https://upload.wikimedia.org/wikipedia/en/a/a4/Ready_Player_One_cover.jpg"
+  },
+  {
+    "name": "Red 1-2-3",
+    "genre": "",
+    "author": "John Katzenbach",
+    "publishdate": "2014-01-07T06:00:00.000Z",
+    "isbn": "9780802192844",
+    "cover": "https://images-na.ssl-images-amazon.com/images/I/51iZFW2%2BQ1L.jpg"
+  }, 
+  {
+    "name":"",
+    "genre":"",
+    "author":"",
+    "publishdate":"",
+    "isbn":"",
+    "cover":""
+  }
