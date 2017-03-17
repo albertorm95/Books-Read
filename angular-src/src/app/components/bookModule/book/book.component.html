@@ -1,41 +1,41 @@
 <div *ngIf="book" class="container">
 	<h2 class="page-header">{{book.name}}</h2>
 	<div class="media">
-  		<div class="media-body">
-  			<div *ngIf="book.author">
-	    		<h4 class="media-heading">Author: </h4>
-	    		{{book.author}}
-	    		<br>
-	    		<br>
-    		</div>
-    		<div *ngIf="book.genre">
-	    		<h4  class="media-heading">Genre: </h4>
-	    		{{book.genre}}
-	    		<br>
-	    		<br>
-    		</div>
-    		<div *ngIf="book.publishdate">
-    			<h4 class="media-heading">Date: </h4>
-    			{{book.publishdate | date}}
-    			<br>
-    			<br>
-    		</div>
-    		<div *ngIf="book.isbn">
-    			<h4 class="media-heading">ISBN: </h4>
-    			{{book.isbn}}
-    			<br>
-    			<br>
-    		</div>
+			<div class="media-body">
+				<div *ngIf="book.author">
+					<h4 class="media-heading">Author: </h4>
+					{{book.author}}
+					<br>
+					<br>
+				</div>
+				<div *ngIf="book.genre">
+					<h4  class="media-heading">Genre: </h4>
+					{{book.genre}}
+					<br>
+					<br>
+				</div>
+				<div *ngIf="book.publishdate">
+					<h4 class="media-heading">Date: </h4>
+					{{book.publishdate | date}}
+					<br>
+					<br>
+				</div>
+				<div *ngIf="book.isbn">
+					<h4 class="media-heading">ISBN: </h4>
+					{{book.isbn}}
+					<br>
+					<br>
+				</div>
 			<h4 class="media-heading">Actions: </h4>
-	    	<form (submit)="onDeleteSubmit()"></form>
-	    	<form (submit)="onEditSubmit()"></form>
-    		<div class="btn-group" role="group">
-    			<button class="btn btn-success" type="button" value="{{book._id}}"><i class="fa fa-wrench" aria-hidden="true"></i></button>
-	    		<button class="btn btn-danger" type="button" value="{{book._id}}"><i class="fa fa-minus" aria-hidden="true"></i></button>
-	    	</div>
-  		</div>
-  		<div  *ngIf="book.cover" class="media-right">
-  			<img src="{{book.cover}}">
-  		</div>
+				<form (submit)="onDeleteSubmit()"></form>
+				<form (submit)="onEditSubmit()"></form>
+				<div class="btn-group" role="group">
+					<button class="btn btn-success" type="button" value="{{book._id}}"><i class="fa fa-wrench" aria-hidden="true"></i></button>
+					<button class="btn btn-danger" type="button" value="{{book._id}}"><i class="fa fa-minus" aria-hidden="true"></i></button>
+				</div>
+			</div>
+			<div  *ngIf="book.cover" class="media-right">
+				<img src="{{book.cover}}">
+			</div>
 	</div>
 </div>

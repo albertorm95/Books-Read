@@ -30,38 +30,38 @@ import { AuthGuard } from './guards/auth.guard';
 import { BookService } from './services/book.service';
 
 const appRoutes: Routes = [
-  {path:'', component:HomeComponent},
-  {path:'register', component:RegisterComponent},
-  {path:'login', component:LoginComponent},
-  {path:'dashboard', component:DashboardComponent, canActivate:[AuthGuard]},
-  {path:'profile', component:ProfileComponent},
-  {path:'books', component:BooksComponent},
-  {path:'book/:id', component:BookComponent},
-  {path:'createbook', component:CreateBookComponent}
+	{path:'', component:HomeComponent},
+	{path:'register', component:RegisterComponent},
+	{path:'login', component:LoginComponent},
+	{path:'dashboard', component:DashboardComponent, canActivate:[AuthGuard]},
+	{path:'profile', component:ProfileComponent},
+	{path:'books', component:BooksComponent},
+	{path:'book/:id', component:BookComponent},
+	{path:'createbook', component:CreateBookComponent}
 ]
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    RegisterComponent,
-    LoginComponent,
-    HomeComponent,
-    DashboardComponent,
-    ProfileComponent,
-    BookComponent,
-    BooksComponent,
-    CreateBookComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    RouterModule.forRoot(appRoutes),
-    FlashMessagesModule
-  ],
-  providers: [ValidateService, AuthService, AuthGuard,
-    BookService],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		NavbarComponent,
+		RegisterComponent,
+		LoginComponent,
+		HomeComponent,
+		DashboardComponent,
+		ProfileComponent,
+		BookComponent,
+		BooksComponent,
+		CreateBookComponent
+	],
+	imports: [
+		BrowserModule,
+		FormsModule,
+		HttpModule,
+		RouterModule.forRoot(appRoutes),
+		FlashMessagesModule
+	],
+	providers: [ValidateService, AuthService, AuthGuard,
+		BookService],
+	bootstrap: [AppComponent]
 })
 export class AppModule { }

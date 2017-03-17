@@ -12,9 +12,9 @@ export class BooksComponent implements OnInit {
 	book: Object;
 
 	constructor(
-        private flashMessage: FlashMessagesService,
-        private bookService: BookService,
-        private router: Router) { }
+		private flashMessage: FlashMessagesService,
+		private bookService: BookService,
+		private router: Router) { }
 
 	ngOnInit() {
 		this.bookService.getBooks().subscribe(books => {
