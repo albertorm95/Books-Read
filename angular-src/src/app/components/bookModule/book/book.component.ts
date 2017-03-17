@@ -16,26 +16,26 @@ export class BookComponent implements OnInit {
 		private flashMessage: FlashMessagesService,
 		private bookService: BookService,
 		private router: Router,
-		private route: ActivatedRoute
-	) { }
+		private route: ActivatedRoute,
+	) {
+		this.id = this.route.snapshot.params['id'];
+	}
 
 	ngOnInit() {
-		const id = this.route.snapshot.params['id'];
-		this.bookService.getBook(id).subscribe(book => {
+		this.bookService.getBook(this.id).subscribe(book => {
 			this.book = book;
 		});
 	}
 
 	onDeleteSubmit(){
-		const id = this.route.snapshot.params['id'];
-		this.bookService.deleteBook(id).subscribe(data => {
+		this.bookService.deleteBook(this.id).subscribe(data => {
 			if(data.success){
 				this.flashMessage.show('Success! Book deleted.', { cssClass: 'alert-success', timeout: 5000});
 				this.router.navigate(['/books']);
 			}
 			else{
 				this.flashMessage.show('Fail! Book no deleted.', { cssClass: 'alert-danger', timeout: 5000});
-				this.router.navigate(['/book/'+id]);
+				this.router.navigate(['/book/'+this.id]);
 			}
 		});
 	}

@@ -3,29 +3,30 @@
 	<form (submit)="onUpdateSubmit()">
 		<div class="from-group">
 			<label>Name</label>
-			<input class="form-control" type="text" [(ngModel)]="name" name="name" >
-		</div>
-		<div class="from-group">
-			<label>Genre</label>
-			<input class="form-control" type="text" [(ngModel)]="genre" name="genre">
+			<input class="form-control" type="text" [(ngModel)]="name" name="name" placeholder="{{book.name}}">
 		</div>
 		<div class="from-group">
 			<label>Author</label>
-			<input class="form-control" type="text" [(ngModel)]="author" name="author">
+			<input class="form-control" type="text" [(ngModel)]="author" name="author" placeholder="{{book.author}}">
 		</div>
 		<div class="from-group">
-			<label>Isbn</label>
-			<input class="form-control" type="text" [(ngModel)]="isbn" name="isbn">
+			<label>Genre</label>
+			<input class="form-control" type="text" [(ngModel)]="genre" name="genre" placeholder="{{book.genre}}">
 		</div>
 		<div class="from-group">
 			<label>Date</label>
-			<input class="form-control" type="text" [(ngModel)]="publishdate" name="publishdate">
+			<input class="form-control" type="text" [(ngModel)]="publishdate" name="publishdate" placeholder="{{book.publishdate}}">
+		</div>
+		<div class="from-group">
+			<label>Isbn</label>
+			<input class="form-control" type="text" [(ngModel)]="isbn" name="isbn" placeholder="{{book.isbn}}">
 		</div>
 		<div class="from-group">
 			<label>Cover (URL)</label>
-			<input class="form-control" type="url" [(ngModel)]="cover" name="cover">
+			<input class="form-control" type="url" [(ngModel)]="cover" name="cover" placeholder="{{book.cover}}">
 		</div>
 		<br>
-		<input class="btn btn-primary" type="submit" value="Submit">
+		<button class="btn btn-primary" [routerLink]="['/book', book._id]"><i class="fa fa-hand-o-left" aria-hidden="true"></i></button>
+		<input class="btn btn-success" type="submit" value="Submit">
 	</form>
 </div>

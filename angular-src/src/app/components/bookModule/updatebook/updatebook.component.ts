@@ -23,17 +23,17 @@ export class UpdatebookComponent implements OnInit {
     private bookService: BookService,
     private router: Router,
     private route: ActivatedRoute
-  ) { }
+  ) {
+    this.id = this.route.snapshot.params['id'];
+  }
 
   ngOnInit() {
-    const id = this.route.snapshot.params['id'];
-    this.bookService.getBook(id).subscribe(book => {
+    this.bookService.getBook(this.id).subscribe(book => {
       this.book = book;
     });
   }
 
   onUpdateSubmit(){
-    const id = this.route.snapshot.params['id'];
     const book = {
       name: this.name,
       author: this.author,
@@ -42,7 +42,7 @@ export class UpdatebookComponent implements OnInit {
       genre: this.genre,
       publishdate: this.publishdate
     }
-    console.log(id);
+    console.log(this.id);
     console.log(book.name);
     console.log(book.author);
     console.log(book.genre);
@@ -57,14 +57,14 @@ export class UpdatebookComponent implements OnInit {
     }
 
     // Update book
-    this.bookService.updateBook(id, book).subscribe(data => {
+    this.bookService.updateBook(this.id, book).subscribe(data => {
       if(data.success){
         this.flashMessage.show('Book updated!', { cssClass: 'alert-success', timeout: 5000});
-        this.router.navigate(['/book/'+id]);
+        this.router.navigate(['/book/'+this.id]);
       }
       else{
         this.flashMessage.show('Something went wrong', { cssClass: 'alert-danger', timeout: 5000});
-        this.router.navigate(['/book/'+id]);
+        this.router.navigate(['/book/'+this.id]);
       }
     });
   }

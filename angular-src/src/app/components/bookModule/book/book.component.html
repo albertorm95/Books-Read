@@ -18,16 +18,14 @@
 				<h4 class="media-heading">ISBN: </h4>
 				{{book.isbn}}
 			</div>
-			<h4 class="media-heading">Delete: </h4>
-			<form (submit)="onDeleteSubmit()" style="height: 65px">
-				<button class="btn btn-danger" type="submit" value="{{book._id}}"><i class="fa fa-minus" aria-hidden="true"></i></button>
+			<button class="btn btn-info" style="margin-bottom: 25px" [routerLink]="['/updatebook', book._id]"><i class="fa fa-wrench" aria-hidden="true"></i></button>
+			<form (submit)="onDeleteSubmit()">
+				<button class="btn btn-danger" type="submit" value="{{book._id}}"><i class="fa fa-trash" aria-hidden="true"></i></button>
 			</form>
-			<h4 class="media-heading">Update: </h4>
-			<button class="btn btn-success" [routerLink]="['/updatebook', book._id]"><i class="fa fa-wrench" aria-hidden="true"></i></button>
 		</div>
 		<div  *ngIf="book.cover" class="media-right">
 			<h4 class="media-heading">Cover: </h4>
-			<img src="{{book.cover}}">
+			<img src="{{book.cover}}" style="width: 350px;">
 		</div>
 	</div>
 </div>

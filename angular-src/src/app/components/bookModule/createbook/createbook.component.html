@@ -6,26 +6,27 @@
 			<input class="form-control" type="text" [(ngModel)]="name" name="name">
 		</div>
 		<div class="from-group">
+			<label>Author</label>
+			<input class="form-control" type="text" [(ngModel)]="author" name="author">
+		</div>
+		<div class="from-group">
 			<label>Genre</label>
 			<input class="form-control" type="text" [(ngModel)]="genre" name="genre">
 		</div>
 		<div class="from-group">
-			<label>Author</label>
-			<input class="form-control" type="text" [(ngModel)]="author" name="author">
+			<label>Date</label>
+			<input class="form-control" type="text" [(ngModel)]="publishdate" name="publishdate" placeholder="mm/dd/yyyy">
 		</div>
 		<div class="from-group">
 			<label>Isbn</label>
 			<input class="form-control" type="text" [(ngModel)]="isbn" name="isbn">
 		</div>
 		<div class="from-group">
-			<label>Date</label>
-			<input class="form-control" type="date" [(ngModel)]="publishdate" name="publishdate">
-		</div>
-		<div class="from-group">
 			<label>Cover (URL)</label>
 			<input class="form-control" type="text" [(ngModel)]="cover" name="cover">
 		</div>
 		<br>
-		<input class="btn btn-primary" type="submit" value="Submit">
+		<button class="btn btn-primary" [routerLink]="['/books']"><i class="fa fa-hand-o-left" aria-hidden="true"></i></button>
+		<input class="btn btn-success" type="submit" value="Submit">
 	</form>
 </div>

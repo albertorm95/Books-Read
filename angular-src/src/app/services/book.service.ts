@@ -23,6 +23,7 @@ export class BookService {
 
 	// Service in charge of updating the book information
 	updateBook(id, book) {
+		console.log(id);
 		let headers = new Headers();
 		headers.append('Content-Type', 'application/json');
 		return this.http.put('http://localhost:3000/book/update/'+id, book, {headers: headers})

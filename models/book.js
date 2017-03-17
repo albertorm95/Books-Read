@@ -7,10 +7,10 @@ const BookSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    genre: {
+    author: {
         type: String
     },
-    author: {
+    genre: {
         type: String
     },
     publishdate: {
@@ -45,7 +45,7 @@ module.exports.getBooks = function(all, callback) {
 
 // PUT .findOneAndUpdate
 module.exports.updateBook = function(id, updatedBook, callback) {
-    Book.findOneAndUpdate(id, updatedBook, callback);
+    Book.findByIdAndUpdate(id, updatedBook, callback);
 };
 
 // DELETE .findByIdAndRemove
