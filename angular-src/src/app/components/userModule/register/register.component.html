@@ -3,19 +3,19 @@
 	<form (submit)="onRegisterSubmit()">
 		<div class="from-group">
 			<label>Name</label>
-			<input class="form-control" type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" name="name">
+			<input class="form-control" type="text" [(ngModel)]="name" name="name">
 		</div>
 		<div class="from-group">
 			<label>Username</label>
-			<input class="form-control" type="text" [(ngModel)]="username" [ngModelOptions]="{standalone: true}" username="username">
+			<input class="form-control" type="text" [(ngModel)]="username" name="username">
 		</div>
 		<div class="from-group">
 			<label>Email</label>
-			<input class="form-control" type="text" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" email="email">
+			<input class="form-control" type="text" [(ngModel)]="email" name="email">
 		</div>
 		<div class="from-group">
 			<label>Password</label>
-			<input class="form-control" type="Password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" password="password">
+			<input class="form-control" type="Password" [(ngModel)]="password" name="password">
 		</div>
 		<br>
 		<input class="btn btn-primary" type="submit" value="Submit">

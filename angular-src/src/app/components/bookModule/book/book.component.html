@@ -1,41 +1,33 @@
 <div *ngIf="book" class="container">
 	<h2 class="page-header">{{book.name}}</h2>
 	<div class="media">
-			<div class="media-body">
-				<div *ngIf="book.author">
-					<h4 class="media-heading">Author: </h4>
-					{{book.author}}
-					<br>
-					<br>
-				</div>
-				<div *ngIf="book.genre">
-					<h4  class="media-heading">Genre: </h4>
-					{{book.genre}}
-					<br>
-					<br>
-				</div>
-				<div *ngIf="book.publishdate">
-					<h4 class="media-heading">Date: </h4>
-					{{book.publishdate | date}}
-					<br>
-					<br>
-				</div>
-				<div *ngIf="book.isbn">
-					<h4 class="media-heading">ISBN: </h4>
-					{{book.isbn}}
-					<br>
-					<br>
-				</div>
-			<h4 class="media-heading">Actions: </h4>
-				<form (submit)="onDeleteSubmit()"></form>
-				<form (submit)="onEditSubmit()"></form>
-				<div class="btn-group" role="group">
-					<button class="btn btn-success" type="button" value="{{book._id}}"><i class="fa fa-wrench" aria-hidden="true"></i></button>
-					<button class="btn btn-danger" type="button" value="{{book._id}}"><i class="fa fa-minus" aria-hidden="true"></i></button>
-				</div>
+		<div class="media-body">
+			<div *ngIf="book.author" style="height: 75px">
+				<h4 class="media-heading">Author: </h4>
+				{{book.author}}
 			</div>
-			<div  *ngIf="book.cover" class="media-right">
-				<img src="{{book.cover}}">
+			<div *ngIf="book.genre" style="height: 75px">
+				<h4 class="media-heading">Genre: </h4>
+				{{book.genre}}
 			</div>
+			<div *ngIf="book.publishdate" style="height: 75px">
+				<h4 class="media-heading">Date: </h4>
+				{{book.publishdate | date}}
+			</div>
+			<div *ngIf="book.isbn" style="height: 75px">
+				<h4 class="media-heading">ISBN: </h4>
+				{{book.isbn}}
+			</div>
+			<h4 class="media-heading">Delete: </h4>
+			<form (submit)="onDeleteSubmit()" style="height: 65px">
+				<button class="btn btn-danger" type="submit" value="{{book._id}}"><i class="fa fa-minus" aria-hidden="true"></i></button>
+			</form>
+			<h4 class="media-heading">Update: </h4>
+			<button class="btn btn-success" [routerLink]="['/updatebook', book._id]"><i class="fa fa-wrench" aria-hidden="true"></i></button>
+		</div>
+		<div  *ngIf="book.cover" class="media-right">
+			<h4 class="media-heading">Cover: </h4>
+			<img src="{{book.cover}}">
+		</div>
 	</div>
 </div>

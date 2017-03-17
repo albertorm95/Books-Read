@@ -8,7 +8,7 @@ export class BookService {
 	constructor(private http: Http) {}
 
 	// Validate Service to require the Book's name
-	validateCreateBook(book) {
+	validateBook(book) {
 		if (book.name == undefined) return false; 
 		else return true;
 	};
@@ -22,10 +22,10 @@ export class BookService {
 	};
 
 	// Service in charge of updating the book information
-	updateBook(book) {
+	updateBook(id, book) {
 		let headers = new Headers();
 		headers.append('Content-Type', 'application/json');
-		return this.http.put('http://localhost:3000/book/update/:id', book, {headers: headers})
+		return this.http.put('http://localhost:3000/book/update/'+id, book, {headers: headers})
 			.map(res => res.json());
 	};
 	

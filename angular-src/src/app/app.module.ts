@@ -21,6 +21,7 @@ import { ProfileComponent } from './components/userModule/profile/profile.compon
 import { BookComponent } from './components/bookModule/book/book.component';
 import { BooksComponent } from './components/bookModule/books/books.component'
 import { CreateBookComponent } from './components/bookModule/createbook/createbook.component';
+import { UpdatebookComponent } from './components/bookModule/updatebook/updatebook.component';
 
 // Services
 import { ValidateService } from './services/validate.service';
@@ -37,7 +38,8 @@ const appRoutes: Routes = [
 	{path:'profile', component:ProfileComponent},
 	{path:'books', component:BooksComponent},
 	{path:'book/:id', component:BookComponent},
-	{path:'createbook', component:CreateBookComponent}
+	{path:'createbook', component:CreateBookComponent},
+	{path:'updatebook/:id', component:UpdatebookComponent}
 ]
 
 @NgModule({
@@ -51,7 +53,8 @@ const appRoutes: Routes = [
 		ProfileComponent,
 		BookComponent,
 		BooksComponent,
-		CreateBookComponent
+		CreateBookComponent,
+		UpdatebookComponent
 	],
 	imports: [
 		BrowserModule,

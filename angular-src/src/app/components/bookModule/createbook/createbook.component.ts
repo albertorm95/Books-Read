@@ -35,7 +35,7 @@ export class CreateBookComponent implements OnInit {
         }
 
         // Required Fields
-        if(!this.bookService.validateCreateBook(book)){
+        if(!this.bookService.validateBook(book)){
             this.flashMessage.show('Please fill in all fields', { cssClass: 'alert-danger', timeout: 5000});
             return false;
         }

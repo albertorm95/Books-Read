@@ -1,9 +1,9 @@
-<div class="container">
-	<h2 class="page-header">Create Book</h2>
-	<form (submit)="onRegisterSubmit()">
+<div *ngIf="book" class="container">
+	<h2 class="page-header">Update Book: {{book.name}}</h2>
+	<form (submit)="onUpdateSubmit()">
 		<div class="from-group">
 			<label>Name</label>
-			<input class="form-control" type="text" [(ngModel)]="name" name="name">
+			<input class="form-control" type="text" [(ngModel)]="name" name="name" >
 		</div>
 		<div class="from-group">
 			<label>Genre</label>
@@ -19,11 +19,11 @@
 		</div>
 		<div class="from-group">
 			<label>Date</label>
-			<input class="form-control" type="date" [(ngModel)]="publishdate" name="publishdate">
+			<input class="form-control" type="text" [(ngModel)]="publishdate" name="publishdate">
 		</div>
 		<div class="from-group">
 			<label>Cover (URL)</label>
-			<input class="form-control" type="text" [(ngModel)]="cover" name="cover">
+			<input class="form-control" type="url" [(ngModel)]="cover" name="cover">
 		</div>
 		<br>
 		<input class="btn btn-primary" type="submit" value="Submit">
