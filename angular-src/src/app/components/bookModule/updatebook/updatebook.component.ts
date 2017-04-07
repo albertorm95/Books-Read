@@ -29,7 +29,13 @@ export class UpdatebookComponent implements OnInit {
 
   ngOnInit() {
     this.bookService.getBook(this.id).subscribe(book => {
-      this.book = book;
+      this.book = book,
+      this.name = book.name,
+      this.author = book.author,
+      this.isbn = book.isbn,
+      this.genre = book.genre,
+      this.publishdate = book.publishdate,
+      this.cover = book.cover;
     });
   }
 
