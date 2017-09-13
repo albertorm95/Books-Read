@@ -5,7 +5,9 @@
 	"main": "app.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "node app"
+		"start": "node app",
+    "modules": "npm install && cd angular-src && npm install",
+    "build": "cd angular-src && ng build"
 	},
 	"dependencies":{
 		"express":"*",
