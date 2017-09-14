@@ -7,6 +7,8 @@ WORKDIR /usr/src/app
 COPY package.json .
 COPY angular-src/package.json ./angular-src/
 
+# Install app dependencies backend
+RUN npm install --silent
 
 
 # Bundle app source
