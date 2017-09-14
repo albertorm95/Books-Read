@@ -8,7 +8,9 @@ COPY package.json .
 COPY angular-src/package.json ./angular-src/
 
 # Install app dependencies backend
-RUN npm install --silent && cd angular-src && npm install --silent
+RUN npm install --silent
+RUN cd angular-src
+RUN npm install --silent
 
 # Bundle app source
 COPY . .
