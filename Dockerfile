@@ -20,4 +20,4 @@ RUN npm install --silent
 # Bundle app source
 COPY . .
 
-RUN npm run build
+RUN ng build
