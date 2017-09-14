@@ -8,7 +8,7 @@ COPY package.json .
 COPY angular-src/package.json ./angular-src/
 
 # Install angular-cli
-RUN npm install -g --silent @angular/cli
+
 
 # Install app dependencies backend
 RUN npm install --silent
