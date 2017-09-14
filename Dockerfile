@@ -1,4 +1,4 @@
-FROM alexsuch/angular-cli:base
+FROM node:boron
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -8,7 +8,7 @@ COPY package.json .
 COPY angular-src/package.json ./angular-src/
 
 # Install angular-cli
-
+RUN npm install --silent @angular/cli
 
 # Install app dependencies backend
 RUN npm install --silent
@@ -20,4 +20,4 @@ RUN npm install --silent
 # Bundle app source
 COPY . .
 
-RUN ng build
+RUN npm run build
