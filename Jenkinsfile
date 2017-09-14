@@ -2,7 +2,8 @@ node {
     def app
 
     stage('Clone repository') {
-        git clone https://github.com/albertorm95/Books-Read
+        /* Let's make sure we have the repository cloned to our workspace */
+        checkout scm
     }
 
     stage('Build image') {
