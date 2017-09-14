@@ -9,14 +9,14 @@ COPY angular-src/package.json ./angular-src/
 
 # Install app dependencies backend
 RUN npm install --silent
-RUN cd angular-src
+CMD [ 'cd', 'angular-src']
 RUN npm install --silent
 
 # Bundle app source
 COPY . .
 
 # Install angular-cli
-RUN sudo npm install -g --silent @angular/cli
+CMD ["sudo", "npm install -g --silent @angular/cli"]
 
 RUN cd angular-src && ng build
 
