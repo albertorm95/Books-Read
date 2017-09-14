@@ -6,7 +6,7 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "node app",
-    "modules": "npm install && cd angular-src && npm install",
+    "modules": "npm install --silent && cd angular-src && npm install --silent",
     "build": "cd angular-src && ng build"
 	},
 	"dependencies":{
