@@ -20,7 +20,7 @@ COPY . .
 
 # Install angular-cli
 WORKDIR /usr/src/app/angular-src
-RUN node ./angular-src/node_modules/@angular/cli/bin/ng build
+RUN node ./node_modules/@angular/cli/bin/ng build
 
 WORKDIR /usr/src/app/
 
