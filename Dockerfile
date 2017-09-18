@@ -23,7 +23,7 @@ RUN npm install -g --silent @angular/cli
 
 WORKDIR /usr/src/app/angular-src
 
-RUN ng build --no-progress
+RUN ng build
 
 WORKDIR /usr/src/app/
 
