@@ -1,8 +1,5 @@
 FROM node:boron
 
-RUN node --version
-RUN npm --version
-
 # Create app directory
 WORKDIR /usr/src/app
 
