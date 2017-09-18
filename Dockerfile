@@ -19,7 +19,7 @@ WORKDIR /usr/src/app
 COPY . .
 
 # Install angular-cli
-RUN npm install -g @angular/cli
+RUN npm install -g --silent @angular/cli
 
 WORKDIR /usr/src/app/angular-src
 
