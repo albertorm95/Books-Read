@@ -8,14 +8,22 @@ COPY package.json .
 COPY angular-src/package.json ./angular-src/
 
 # Install app dependencies backend
-RUN npm run modules
+RUN npm --silent install
 
-# Install angular-cli
-RUN npm install -g --silent @angular/cli
+# Install app dependencies frontend
+WORKDIR /usr/src/app/angular-src
+RUN npm --silent install
 
+# Bundle app source
+WORKDIR /usr/src/app
 COPY . .
 
-RUN npm run build
+# Install angular-cli
+RUN npm install -g @angular/cli
+
+WORKDIR /usr/src/app/angular-src
+
+RUN ng build
 
 WORKDIR /usr/src/app/
 
